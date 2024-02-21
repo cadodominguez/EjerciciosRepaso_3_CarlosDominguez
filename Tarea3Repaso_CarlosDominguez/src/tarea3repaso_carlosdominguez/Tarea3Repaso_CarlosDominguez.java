@@ -32,7 +32,25 @@ public class Tarea3Repaso_CarlosDominguez {
                         mayor = cad2;
                         menor = cad1;
                     }
-                    
+                    String comp = "";
+                    String rev1;
+                    for (int i = 0; i < menor.length(); i++) {
+                        for (int j = 0; j < mayor.length(); j++){
+                            if (menor.charAt(i) == mayor.charAt(j)) {
+                                rev1 = mayor.charAt(j) + "";
+                                if (comp.contains(rev1)) {
+                                    comp += "";
+                                }else{
+                                    comp += mayor.charAt(j);
+                                }
+                            }
+                        }
+                    }
+                    if (comp.equals(menor)) {
+                        System.out.println("Si se puede armar " + menor);
+                    }else{
+                        System.out.println("No se puede armar " + menor);
+                    }
                     break;
                 case 2:
                     brazil.nextLine();
