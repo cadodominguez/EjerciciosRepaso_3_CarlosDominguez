@@ -1,5 +1,6 @@
 
 package tarea3repaso_carlosdominguez;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Tarea3Repaso_CarlosDominguez {
     
@@ -99,8 +100,9 @@ public class Tarea3Repaso_CarlosDominguez {
                     System.out.println("");
                     break;
                 case 5:
-                   
-                    
+                    int posiciones [] = llenar ();
+                    imprimir (posiciones);
+                    System.out.println("");
                    break;
                 case 6:
                     System.out.println("Saliendo......");
@@ -177,5 +179,17 @@ public class Tarea3Repaso_CarlosDominguez {
         }
         return temporal;
     }
+   
+    public static int [] llenar (){
+        int temporal [] = new int [10];
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Ingrese un numero en el array : ");
+            temporal [i] = brazil.nextInt();
+        }
+        return temporal ;
+    }
     
+    public static void imprimir ( int arreglo [] ){
+       System.out.println(Arrays.toString(arreglo));
+    }
 }
