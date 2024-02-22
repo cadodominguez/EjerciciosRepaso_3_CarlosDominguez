@@ -70,7 +70,24 @@ public class Tarea3Repaso_CarlosDominguez {
                     System.out.println("");
                     break;
                 case 3:
-                    
+                    brazil.nextLine();
+                    System.out.println("Ingrese una cadena para ordenar alfabeticamente : ");
+                    String cadena = brazil.nextLine();
+                    cadena = cadena.toLowerCase();
+                    cadena = cadena.replace(" ", "");
+                    int retornado = 0;
+                    String cadenaA = ""; 
+                    for (int i = 0; i <  cadena.length(); i++) {
+                        if (cadena.charAt(i) >= 48 && cadena.charAt(i) <= 57) {
+                            retornado += 1;
+                        }else{
+                            cadenaA += cadena.charAt(i);
+                        }
+                    }
+                    String ordenada = ordenarAlfabeticamente (cadenaA);
+                    System.out.println("La cadena ordenada alfabeticamente es : " + ordenada);
+                    System.out.println("Numeros en la Cadena : " + retornado);
+                    System.out.println("");
                     break;
                 case 4:
                     brazil.nextLine();
@@ -82,6 +99,7 @@ public class Tarea3Repaso_CarlosDominguez {
                     System.out.println("");
                     break;
                 case 5:
+                   
                     
                    break;
                 case 6:
@@ -95,6 +113,19 @@ public class Tarea3Repaso_CarlosDominguez {
         } while (out);
     }
     
+    public static String ordenarAlfabeticamente (String cad ) {
+        String temporal = "" ;
+        int letra = 97;
+        for (int i = 0; i < 25; i++) {
+            for (int j = 0; j < cad.length(); j++){
+                if (cad.charAt(j) == letra) {
+                    temporal += cad.charAt(j);
+                }
+            }
+            letra += 1;
+        }
+        return temporal;
+    }
     public static String codificacion (String cadIngresada){
         String temporal = "";
         for (int i = 0; i < cadIngresada.length(); i++) {
